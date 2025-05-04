@@ -1,0 +1,134 @@
+/* Webpage Background */
+body {
+    background: linear-gradient(120deg, #a8edea, #f9dbdb, #f6d365, #fda085);
+    background-size: 400% 400%; /* Create a smooth gradient animation */
+    animation: gradientAnimation 10s ease infinite; /* Optional animation */
+    font-family: 'Roboto', sans-serif; /* Sets a professional font for the webpage */
+}
+
+/* Optional Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header .header-bg {
+    background: url(bg7.jpg) no-repeat center center/cover; /* Background image */
+    background-size: cover; /* Ensures the image covers the header area */
+    background-position: center; /* Centers the image */
+   
+    filter:  brightness(80%); /* Reduces color intensity */
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive; /* Stylish, elegant font */
+    font-size: 3.5em; /* Large text size */
+    color: transparent; /* Initially transparent for text gradient */
+    background-image: linear-gradient(to right, #ed5118, #0e7ae6, #0cf50c, #b10e60); /* Colorful gradient */
+    background-clip: text; /* Clips the gradient inside the text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    text-align: center; /* Center aligns text */
+}
+ 
+
+
+nav.menu-bar {
+    background-color: #920808; /* A sleek, dark color */
+    padding: 15px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle 3D shadow effect */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+nav.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav.menu-bar ul li {
+    margin: 0 20px;
+}
+
+nav.menu-bar ul li a {
+    color: #f4f4f4; /* A soft, contrasting text color */
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif; /* Professional font style */
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+nav.menu-bar ul li a:hover {
+    background-color: #575757; /* A matching gray for hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds dynamic shadow on hover */
+    border-radius: 8px; /* Rounded corners on hover */
+    transform: scale(1.1); /* Creates a slight zoom effect */
+    color: #ffd700; /* Golden text color to make it pop */
+}
+
+
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 50px;
+}
+
+.image-container {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    border: 2px solid #cac3c3;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Zoom-in effect */
+    filter: brightness(80%); /* Darken effect */
+}
+
+/* Hover Text Effect */
+.hover-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .hover-effect {
+    opacity: 1; /* Fade-in effect */
+}
